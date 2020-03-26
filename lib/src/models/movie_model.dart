@@ -63,4 +63,13 @@ class Movie {
     overview = json['overview'];
     releaseDate = json['release_date'];
   }
+
+  //obtener posters para el card_swiper
+  getPosterImg() {
+    if (posterPath == null) {
+      return 'https://www.samsung.com/etc/designs/smg/global/imgs/support/cont/NO_IMG_600x600.png';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500/$posterPath';
+    }
+  }
 }
